@@ -2,9 +2,9 @@
 
 #### 1.格式校验(permitter + commitlint)
 
-permitter配置查看.permitter.json文件
+permitter 配置查看.permitter.json 文件
 
-commlint规范参考：
+commlint 规范参考：
 
 upd：更新某功能（不是 feat, 不是 fix）
 feat：新功能（feature）
@@ -17,19 +17,18 @@ chore：构建过程或辅助工具的变动
 
 #### 2.全局错误异常设置
 
-代码报错，react会卸载组件，页面显示白屏，体验不好
+代码报错，react 会卸载组件，页面显示白屏，体验不好
 
-引入react-error-boundary库做异常页面提示
+引入 react-error-boundary 库做异常页面提示
 
 #### 3.antd 引入
 
-使用@craco/craco可自定义配置
+使用@craco/craco 可自定义配置
 
 #### 4.路由自动加载，权限配置
-
 
 #### 5.react-redux 全局仓库
 
 #### 6.请求方法封装
-#### 7.常用 hook 封装
 
+#### 7.常用 hook 封装
