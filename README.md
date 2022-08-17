@@ -1,15 +1,35 @@
 ### react 通用性模板
 
-1.格式校验
+#### 1.格式校验(permitter + commitlint)
 
-2.路由自动加载，权限配置
+permitter配置查看.permitter.json文件
 
-3.全局错误异常设置
+commlint规范参考：
 
-4.react-redux 全局仓库
+upd：更新某功能（不是 feat, 不是 fix）
+feat：新功能（feature）
+fix：修补 bug
+docs：文档（documentation）
+style： 格式（不影响代码运行的变动）
+refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）
+test：增加测试
+chore：构建过程或辅助工具的变动
 
-5.请求方法封装
+#### 2.全局错误异常设置
 
-6.常用 hook 封装
+代码报错，react会卸载组件，页面显示白屏，体验不好
 
-7.antd 引入
+引入react-error-boundary库做异常页面提示
+
+#### 3.antd 引入
+
+使用@craco/craco可自定义配置
+
+#### 4.路由自动加载，权限配置
+
+
+#### 5.react-redux 全局仓库
+
+#### 6.请求方法封装
+#### 7.常用 hook 封装
+

@@ -1,12 +1,18 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import { ErrorBoundary } from "react-error-boundary"
+import { FullPageErrorFallback } from "./components/lib"
+import { Button } from "antd"
 
 function App() {
   return (
-    <div className="App">
+    <ErrorBoundary fallbackRender={FullPageErrorFallback} onReset={() => {
+      
+    }}>
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Button type="primary">test</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -20,6 +26,8 @@ function App() {
         </a>
       </header>
     </div>
+    </ErrorBoundary>
+
   );
 }
 
