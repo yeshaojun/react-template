@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 ### react 通用性模板
 
 #### 1.格式校验(permitter + commitlint)
