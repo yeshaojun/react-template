@@ -24,7 +24,7 @@ export const useAsync = <D>(initialState?: State<D>) => {
       status: "success",
       error: null
     })
-  }, [])
+  }, [setState])
 
 
   const setError = useCallback(
@@ -34,24 +34,24 @@ export const useAsync = <D>(initialState?: State<D>) => {
         status: 'error',
         data: null,
       }),
-    []
+    [setState]
   );
 
   const run = useCallback((promise: Promise<any>) => {
     if (!promise || !promise.then) {
       throw new Error('请传入Promise类型数据')
     }
-    setState({
+    setState((state) => ({
       ...state,
       status: "loading"
-    })
+    }))
     return promise.then((data) => {
       setData(data)
       return data
     }).catch(error => {
       setError(error)
     })
-  }, [])
+  }, [setData, setError, setState])
 
   return {
     isLoading: state.status === 'loading',

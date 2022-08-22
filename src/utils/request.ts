@@ -32,6 +32,7 @@ const Request = (config: AxiosRequestConfig) => {
       // 发送成功
       if (response.data.code === 0) {
         // 成功
+        return response.data.data
       } else {
         message.error(response.data.msg);
       }
